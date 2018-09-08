@@ -1,0 +1,33 @@
+Bitset in STL!
+
+Roulette Wheel Sampling
+    Likelihood of organism being selected is his fitness over the total fitness of population
+    Give each organism a slice of a pie-wheel equal to his fitness level
+    Pie-wheel has nmber of slots equal to total fitness of population
+    Pick slot of pie-wheel and whoever owns that slot is picked to mate, therefore, those with large sections of the pie are most likely to be picked.
+    
+    Let S = Sum of fitness
+    Select random real number between 0 and S 
+    Loop through your population, adding fitness of each individual until your sum is greater than or equal to S
+    Select that individual to mate.
+    
+Crossover Operator
+    One of the simplest ways to crossover is call the single point crossover.
+        Select random position for every parent and swap bits from then on
+        
+    Ex) Parent1) 1100|101
+        Parent2) 0110|001   Swap at |
+        
+        Offspr1) 1100|001
+        Offspr2) 0110|101
+        
+Mutation Operation
+    Loop i through chromosome (bits)
+    double x = Rand() / (double)Rand_Max
+    if x < .01 'low probability of mutating a bit
+        flipBit(i)
+        
+Generations continue until convergence
+    Convergence is either you find the fittest organism possible (all 1s in a chromosome) OR you loop through so many generations that you're ready to stop (1000 or so)
+    
+    Note: Almost all organisms in the final generation are the same or very similar, whether that's good fitness or bad

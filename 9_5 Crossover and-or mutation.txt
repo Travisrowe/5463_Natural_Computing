@@ -1,0 +1,24 @@
+Exploration - Has an equal probability of bettering or worsening an organism. Mutation is an exploration.
+Exploitation - likelihood of bettering your population with each generation. Crossover is an exploitation
+    Both of these are necessary in evolution. Exploitation can only get you as good as the local population - "The nearest hill".
+    But if there are bigger hills in a different area, then your population will not reach their fullest potential through exploitation alone.
+    
+    Disruption vs Construction
+    Disruption (exploration) is indivual
+    Construction (Exploitation) climbs the hills
+    
+Pool ball problem
+                                        O   O   O   O   O   15  1   7   9   12
+                                          O   O   O   O       14  6   2   3
+                                            O   O   O           8   4   X(bad, already have a 1)
+                                              O   O               X   X     (bad, already have a 4, and bad can't subtract X)
+                                                O                   X
+Subtract the two balls above currBall to determine number of currBall
+What top row of balls gets all numbers 1-15 without repeating?
+
+                                                Some methods...
+Have to determine what chromosome looks like    [an array with integers 1 through 15]
+fitness                                         How many bad balls there are in the end
+crossover                                       
+mutate                                          Permutation - switching one ball's position with another
+
