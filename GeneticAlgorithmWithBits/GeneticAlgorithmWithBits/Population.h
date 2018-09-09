@@ -9,6 +9,7 @@ private:
 
 	int GetTotalFitness();
 public:
+	bool CheckConvergence();
 	Population();
 	Population(int);
 	~Population();
@@ -17,6 +18,7 @@ public:
 	Chromosome RouletteSelection();
 	void Print();
 	void EvolveGeneration(Population&);
-	void CheckConversion();
+	
+	void operator= (Population);
 };
 

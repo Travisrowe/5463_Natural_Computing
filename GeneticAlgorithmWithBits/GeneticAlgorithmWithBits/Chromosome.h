@@ -22,5 +22,6 @@ public:
 	void Mutate();
 	int GetFitness();
 	void Print();
+	void operator= (Chromosome);
 };
 

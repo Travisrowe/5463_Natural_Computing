@@ -1,5 +1,5 @@
 ﻿  GeneticAlgorithmWithBits.cpp
   Population.cpp
-c:\users\travis\documents\school_related\natural computing\geneticalgorithmwithbits\geneticalgorithmwithbits\population.cpp(6): warning C4018: '<': signed/unsigned mismatch
+c:\users\travis\documents\school_related\natural computing\geneticalgorithmwithbits\geneticalgorithmwithbits\population.cpp(16): warning C4018: '<': signed/unsigned mismatch
   Generating Code...
   GeneticAlgorithmWithBits.vcxproj -> C:\Users\Travis\Documents\School_Related\Natural Computing\GeneticAlgorithmWithBits\Debug\GeneticAlgorithmWithBits.exe

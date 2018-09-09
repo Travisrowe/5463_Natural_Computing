@@ -1,6 +1,16 @@
 #include "pch.h"
 #include "Population.h"
 
+bool Population::CheckConvergence()
+{
+	for (int i = 0; i < POP_SIZE; i++)
+	{
+		if (population[i].GetFitness() == 20)
+			return true;
+	}
+	return false;
+}
+
 void Population::EvolveGeneration(Population& nextGen)
 {
 	while (nextGen.population.size() < POP_SIZE)
@@ -35,6 +45,15 @@ int Population::GetTotalFitness()
 	return totFitness;
 }
 
+void Population::operator= (Population newGen)
+{
+	for (int i = 0; i < POP_SIZE; i++)
+	{
+		population[i] = newGen.population[i];
+	}
+	this->generation = newGen.generation;
+}
+
 void Population::Print()
 {
 	cout << population.size() << endl;
@@ -44,6 +63,7 @@ void Population::Print()
 	}
 }
 
+//By default, this fills a population with random Chromosomes
 Population::Population()
 {
 	generation = 1;
@@ -56,6 +76,7 @@ Population::Population()
 	}
 }
 
+//This creates an empty population, but adjusts the generation number
 Population::Population(int gen)
 {
 	generation = gen;
