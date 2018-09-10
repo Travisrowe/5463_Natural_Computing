@@ -18,7 +18,6 @@ public:
 	Chromosome RouletteSelection();
 	void Print();
 	void EvolveGeneration(Population&);
-	
 	void operator= (Population);
 };
 
