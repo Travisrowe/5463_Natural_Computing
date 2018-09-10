@@ -9,8 +9,8 @@ using namespace std;
 class Chromosome
 {
 private:
-	const int CHROM_SIZE = 20;
-	bitset<20> chrom;
+	const int CHROM_SIZE = 40;
+	bitset<40> chrom;
 	int fitness;
 
 	void SetFitness();
@@ -23,5 +23,6 @@ public:
 	int GetFitness();
 	void Print();
 	void operator= (Chromosome);
+	int GetChromSize();
 };
 

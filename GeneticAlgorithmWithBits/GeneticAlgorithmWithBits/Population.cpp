@@ -6,6 +6,8 @@ bool Population::CheckConvergence()
 	for (int i = 0; i < POP_SIZE; i++)
 	{
 		if (population[i].GetFitness() == 20)
+			int x = 0;
+		if (population[i].GetFitness() == population[i].GetChromSize())
 			return true;
 	}
 	return false;

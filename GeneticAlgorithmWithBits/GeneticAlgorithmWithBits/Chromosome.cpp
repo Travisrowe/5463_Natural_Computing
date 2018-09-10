@@ -43,8 +43,15 @@ void Chromosome::Crossover(Chromosome& parentB)
 		chrom[j + pos] = tempB[j];
 		parentB.chrom[j + pos] = tempA[j];
 	}
+	this->SetFitness();
+	parentB.SetFitness();
 	/*this->Print();
 	parentB.Print();*/
+}
+
+int Chromosome::GetChromSize()
+{
+	return CHROM_SIZE;
 }
 
 int Chromosome::GetFitness()
@@ -82,6 +89,7 @@ void Chromosome::Mutate()
 			chrom.flip(i);
 		}
 	}
+	this->SetFitness();
 }
 
 //Fills the chromosome with random bits.
