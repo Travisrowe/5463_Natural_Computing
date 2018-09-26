@@ -1,0 +1,65 @@
+FYI C++11 has another RNG: default_random_engine
+
+Particle Swarm Optimization
+    Point = (x,y)
+    Vector = (x,y) + direction
+    
+    You take one point and add a vector to it, you get another point
+    P1 = P0 + V
+    
+    For  the program, make random points with vectors of random magnitude and direction.
+        Each iteration of the program is all points being adjusted by their respective velocities, you can have the points "bounce" if they reach the edge
+        or wrap around or whatever.
+        
+        Problem is that this is random. The points could miss the optimal solution entirely.
+        Give the particles (points) "smart" features
+            - memory of their best location, pBest
+            - give the particles communication. A global best, gBest.
+            
+        After some amount of iterations, all particles have a personal best, they have a global best, and they have their velocity that they've always had.
+            The difference between the particle's current point and their pBest is a vector, same with currPoint and gBest. You take the sum of these three 
+            velocities to determine the particle's new velocity.
+            
+        Note: Smaller velocities mean that the particles don't search the space as efficiently. Same with smaller swarmsize
+            It is possible that the particles hit a suboptimal peak!
+            
+        You can also give particles a "neighborhood" rather than a global, where they communicate only with their neighbors and find that optimum.
+            Maybe afterward, the different neighborhoods can collaborate.
+            Can be made geographically, or socially, that is where neighbors are close together, or they're connected by some link and can be anywhere on the graph.
+            
+        swarmsize: 10 - 50
+        c1 - importance of personal best 
+        c2 - importance of neighborhood best
+        usually c1 + c2 = 4, for no good reason other than everybody else does it
+        maxVelocity: too low, slow program plus chance of not exploring thoroughly. Too high, can't ever lock in on anything because you overstep.
+            
+    Equation (a)
+    v[] = c0 + v[]
+        + c1 * rand() * (pBest[] - present[]) //pBest - Present = velocity
+        + c2 * rand() * (pBest[] - present[]) //by multiplying a vector by rand(), you lessen the magnitude but not the direction. so they take smaller steps.
+        
+    Equation (b)
+        determine new velocity
+        position = position + velocity
+       
+    For each particle 
+        Initialize particle 
+        //position
+        //velocity
+        //fitness
+        //personal best
+    END
+    
+    Do
+        For each particle
+            calculate fitness 
+            if currFitness > pBest
+                pBest = currFitness;
+        End
+             
+        Choose particle with best fitness, gBest
+        For each particle
+            Calculate particle velocity according Equation(a)
+            Update particle position according Equation(b)
+        End 
+    While maximum iterations or minimum error criteria is not attained

@@ -1,0 +1,21 @@
+Project 1 hindsight view
+
+Rank selection
+    Randomly select two Chromosomes, pick the one with the larger fitness and select it for Reproduction.
+    
+Prints out every 100 bits for a nice output. just a note.
+
+Elitism
+    Find the best chromosome (or the top 5%, 10%, whatever) in every population, then put two copies of that chromosome in next population
+    Note: two copies so that you don't have an odd number of Chromosomes in any given population, because that's a little messy.
+    
+    In Crossover, it is possible that your strongest Chromosome gets crossed (mangled) and the new population suffers for it.
+
+Pool ball
+    Pruning method - Start with first ball on the left, put 1. Then second ball put 2. Find out that doesn't work and prune all permutations with (1, 2, ...).
+    Then replace second ball with next permutation, 3, keep going until you find that doesn't work. etc.
+    
+Intermediate blending scheme
+    Two real numbers that you can blend, x and y
+    z(i) = alpha(x) + (1 - alpha)(y(i)) where 0 <= alpha <= 1
+    alpha is picked at random every time

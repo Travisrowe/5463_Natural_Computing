@@ -1,0 +1,39 @@
+Momentum weight
+    v[] = W * c0 * v[] +
+        c1 * rd() * (pBest - present[]) +
+        c2  * rd() * (gBest - present[]);
+        //or something like that...
+    
+    A bigger W makes smaller steps as you go toward gBest. more exploration.
+    a smaller W makes larger steps toward gBest
+    
+    Want to dampen W for each iteration of program
+        If W is slowly reduced, the efect of the momentum drops and the algorithm will zoom in to one location
+        
+        W = wMax - (wMax - wMin) / iterMax * iterCurr
+        
+Constriction coefficient
+    Another method for the reduction of velocity over time
+    v[] = X * c0 * v[] +
+        c1 * rd() * (pBest - present[]) +
+        c2  * rd() * (gBest - present[]);
+        
+    where X = 2 / (2 - c - sqrt(c^2 - 4c)) where c = c1 + c2, c > 4 
+        Common choice X = .7298
+        
+*Speed trick: Instead of division use left shift
+    Instead of square root in a euchyldian distance, use pythagorm. a^2 + b^2 = euchyldian^2
+    
+Predator - prey
+    Prey nodes run away from predator nodes
+    
+    vPredator(t + 1) = alpha(gBest(t) - xPredator(t))
+    
+    So predators are trying to find global best.
+    Prey are also trying to find the global best, but when a predator nears them, they scatter, thus promoting diversity.
+    In this way, more bests can be found
+    
+    D(d) is the repulsion factor and is calculated using an exponentially decreasing function
+        D(d) = ae^(-bd)
+            d is the Euclidean distance (3D distance) between prey and predator, and b a scaling factor
+

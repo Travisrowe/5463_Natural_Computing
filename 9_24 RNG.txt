@@ -1,0 +1,23 @@
+Random Number Generation
+    rand() % 100 - even if rand is uniform, rand with modulo tends to generate smaller numbers (<50) more often
+    
+    New RNG
+    #include <random>
+    
+    RNG has two kinds of functionality
+        Engine - return unpredictable bits
+        Distribution - return random numbers whose likelihoods correspond to a specific shape (like a bell)
+        
+    e.g.
+    int roll_a_fair_die()
+    {
+        static std::default_random_engine e{}'
+        static std::uniform_int_distribution<int> d{1, 6}
+        return d(e);
+    }
+    
+    std::default_random_engine e3(13607); //gives e3 the seed of 13607
+    
+    // Way of changing the seed, similar to time(NULL)
+    std::random_device rdev{};
+    std::default_random_engine e{rdev()};
