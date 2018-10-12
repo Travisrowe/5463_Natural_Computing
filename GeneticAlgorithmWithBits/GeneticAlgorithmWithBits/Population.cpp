@@ -1,6 +1,9 @@
 #include "pch.h"
 #include "Population.h"
 
+/* If any one Chromosome in a population has fitness equal to CHROM_SIZE
+ * the population is considered converged.
+*/
 bool Population::CheckConvergence()
 {
 	for (int i = 0; i < POP_SIZE; i++)
@@ -13,6 +16,11 @@ bool Population::CheckConvergence()
 	return false;
 }
 
+/* Creates the next generation using the Roulette Selection method
+   to select which Chromosomes will be Crossed over to create offspring.
+   Then it mutates all offspring and pushes them into the next generation's
+   vector.
+ */
 void Population::EvolveGeneration(Population& nextGen)
 {
 	while (nextGen.population.size() < POP_SIZE)
@@ -101,7 +109,7 @@ Chromosome Population::RouletteSelection()
 	int totFitness = GetTotalFitness();
 	int runningFitness = 0, index = 0;
 	int r = rand() % totFitness;
-	
+
 	//find the index of the chromosome to crossover
 	while (r >= runningFitness)
 	{

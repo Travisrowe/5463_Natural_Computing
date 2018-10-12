@@ -36,7 +36,7 @@ Particle Swarm Optimization
     Equation (a)
     v[] = c0 + v[]
         + c1 * rand() * (pBest[] - present[]) //pBest - Present = velocity
-        + c2 * rand() * (pBest[] - present[]) //by multiplying a vector by rand(), you lessen the magnitude but not the direction. so they take smaller steps.
+        + c2 * rand() * (gBest[] - present[]) //by multiplying a vector by rand(), you lessen the magnitude but not the direction. so they take smaller steps.
         
     Equation (b)
         determine new velocity

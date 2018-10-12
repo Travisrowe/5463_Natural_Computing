@@ -1,0 +1,19 @@
+enum class Status { FORWARD, BACKWARD };
+
+Ant.h
+    int label;
+    double deltaTau = 1.0; // pheremone scent
+    int numCities, pathct = 0;
+    double PathLength = 0;
+    vector<int> path //holds vertex numbers
+    int start;
+    int loc;
+    int prev;
+    vector<bool> visited; //true if in path list, ie have seen
+    Status dir; //forward or backward;
+    
+    //Since this is a fully connected graph, shouldn't need to backtrack, i.e. prev might not be necessary
+public:
+    Ant() = delete; //program will not allow default-constructed Ants to be initialized
+    
+extern variables, whole project knows about it //questionable practice

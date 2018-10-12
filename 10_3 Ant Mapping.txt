@@ -1,0 +1,29 @@
+Generating a circle
+    Write circle's nodes' coordinates out to a file, so you read in the file in the actual ant colony program.
+        Node name is the index of the vector you store it, so 0 to N.
+    Output edges to a file: That is, node A to node B and the distance between them.
+        
+Ant map
+    Edges between points have a pheremone attribute (int) that shows how strong of a scent is on the path
+    Probability for an ant to choose an edge is based on the pheremone attribute / sum of pheremone attributes on all possible trails
+        Generate a random number and do a roulette wheel selection to see which path the ant will choose
+        You should even add a distance to the numerator of phermone / sigma(pheremones), which becomes
+        phermone(i) * (1 / distance(i)) / sigma(pheremone). This way, you also wind up choosing the shortest distance.
+    Ants should also have an option to backtrack (recursion or stack) in case he hits a dead end
+    
+Adjacency list in your map
+    vector<vector<Edge>> AdjL; //the left column is the "from" node i.e. node 0 goes to 1, to 3, and to 4
+        //Edge has a "to" node, a distance, and a pheremone
+        
+    Public InsertEdge(from, to, dist)
+    {
+        AdjL[from].push_back(Edge(to, d));
+    }
+    
+    struct Edge //struct and class are essentially the same, but struct is public by default vs class is private by default
+    {
+        int nodeIndex;
+        double distance;
+        double pheremone;
+        Edge(int nI, double d, double ph = 0);
+    }

@@ -22,15 +22,12 @@ Chromosome::~Chromosome()
 //Thus, two children are born into a new generation.
 void Chromosome::Crossover(Chromosome& parentB)
 {
-	/*this->Print();
-	parentB.Print();*/
 	double pCross = rand() / (double)RAND_MAX;
 	if (pCross < .2)
 	{
 		return;
 	}
 	int pos = rand() % CHROM_SIZE;
-	//cout << pos << endl;
 	vector<int> tempA;
 	vector<int> tempB;
 	for (int i = pos; i < CHROM_SIZE; i++)
@@ -45,8 +42,6 @@ void Chromosome::Crossover(Chromosome& parentB)
 	}
 	this->SetFitness();
 	parentB.SetFitness();
-	/*this->Print();
-	parentB.Print();*/
 }
 
 int Chromosome::GetChromSize()

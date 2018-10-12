@@ -1,0 +1,230 @@
+Iteration: 0
+GBest: (421.49, 204.78)
+GBest Fitness: 217.293
+
+Iteration: 100
+GBest: (421.888, 422.499)
+GBest Fitness: 0.402248
+
+Iteration: 200
+GBest: (420.936, 420.997)
+GBest Fitness: 0.000266758
+
+Iteration: 300
+GBest: (420.936, 420.997)
+GBest Fitness: 0.000266758
+
+Iteration: 400
+GBest: (420.958, 420.978)
+GBest Fitness: 5.17957e-05
+
+Iteration: 500
+GBest: (420.958, 420.978)
+GBest Fitness: 5.17957e-05
+
+Iteration: 600
+GBest: (420.958, 420.978)
+GBest Fitness: 5.17957e-05
+
+Iteration: 700
+GBest: (420.958, 420.978)
+GBest Fitness: 5.17957e-05
+
+Iteration: 800
+GBest: (420.958, 420.978)
+GBest Fitness: 5.17957e-05
+
+Iteration: 900
+GBest: (420.958, 420.978)
+GBest Fitness: 5.17957e-05
+
+Iteration: 1000
+GBest: (420.958, 420.978)
+GBest Fitness: 5.17957e-05
+
+
+
+Iteration: 0
+GBest: (421.49, 204.78)
+GBest Fitness: 217.293
+
+Iteration: 100
+GBest: (421.754, 421.557)
+GBest Fitness: 0.121543
+
+Iteration: 200
+GBest: (420.955, 420.845)
+GBest Fitness: 0.00198323
+
+Iteration: 300
+GBest: (421.006, 420.896)
+GBest Fitness: 0.000866436
+
+Iteration: 400
+GBest: (421.019, 420.909)
+GBest Fitness: 0.000795707
+
+Iteration: 500
+GBest: (421.019, 420.909)
+GBest Fitness: 0.000795707
+
+Iteration: 600
+GBest: (421.021, 420.911)
+GBest Fitness: 0.000790872
+
+Iteration: 700
+GBest: (421.021, 420.911)
+GBest Fitness: 0.000790872
+
+Iteration: 800
+GBest: (421.021, 420.911)
+GBest Fitness: 0.000790872
+
+Iteration: 900
+GBest: (421.021, 420.911)
+GBest Fitness: 0.000790872
+
+Iteration: 1000
+GBest: (421.021, 420.911)
+GBest Fitness: 0.000790872
+
+
+
+Iteration: 0
+GBest: (421.49, 204.78)
+GBest Fitness: 217.293
+
+Iteration: 100
+GBest: (421.888, 426.25)
+GBest Fitness: 3.62775
+
+Iteration: 200
+GBest: (423.835, 423.934)
+GBest Fitness: 2.14755
+
+Iteration: 300
+GBest: (423.923, 423.788)
+GBest Fitness: 2.10577
+
+Iteration: 400
+GBest: (424.016, 423.597)
+GBest Fitness: 2.04454
+
+Iteration: 500
+GBest: (423.801, 423.801)
+GBest Fitness: 2.0255
+
+Iteration: 600
+GBest: (423.801, 423.801)
+GBest Fitness: 2.0255
+
+Iteration: 700
+GBest: (423.801, 423.801)
+GBest Fitness: 2.0255
+
+Iteration: 800
+GBest: (423.801, 423.801)
+GBest Fitness: 2.0255
+
+Iteration: 900
+GBest: (423.801, 423.801)
+GBest Fitness: 2.0255
+
+Iteration: 1000
+GBest: (423.801, 423.801)
+GBest Fitness: 2.0255
+
+
+
+Iteration: 0
+GBest: (421.49, 204.78)
+GBest Fitness: 217.293
+
+Iteration: 100
+GBest: (422.032, 420.408)
+GBest Fitness: 0.18239
+
+Iteration: 200
+GBest: (421.788, 420.166)
+GBest Fitness: 0.166049
+
+Iteration: 300
+GBest: (421.787, 420.165)
+GBest Fitness: 0.166045
+
+Iteration: 400
+GBest: (421.787, 420.165)
+GBest Fitness: 0.166045
+
+Iteration: 500
+GBest: (421.787, 420.165)
+GBest Fitness: 0.166045
+
+Iteration: 600
+GBest: (421.782, 420.16)
+GBest Fitness: 0.166031
+
+Iteration: 700
+GBest: (421.782, 420.16)
+GBest Fitness: 0.166031
+
+Iteration: 800
+GBest: (421.782, 420.16)
+GBest Fitness: 0.166031
+
+Iteration: 900
+GBest: (421.782, 420.16)
+GBest Fitness: 0.166031
+
+Iteration: 1000
+GBest: (421.782, 420.16)
+GBest Fitness: 0.166031
+
+
+
+Iteration: 0
+GBest: (421.49, 204.78)
+GBest Fitness: 217.293
+
+Iteration: 100
+GBest: (421.888, 423.038)
+GBest Fitness: 0.647019
+
+Iteration: 200
+GBest: (420.957, 420.985)
+GBest Fitness: 7.62734e-05
+
+Iteration: 300
+GBest: (420.964, 420.982)
+GBest Fitness: 4.88137e-05
+
+Iteration: 400
+GBest: (420.964, 420.982)
+GBest Fitness: 4.88137e-05
+
+Iteration: 500
+GBest: (420.964, 420.982)
+GBest Fitness: 4.88137e-05
+
+Iteration: 600
+GBest: (420.96, 420.978)
+GBest Fitness: 4.40993e-05
+
+Iteration: 700
+GBest: (420.96, 420.978)
+GBest Fitness: 4.40993e-05
+
+Iteration: 800
+GBest: (420.96, 420.978)
+GBest Fitness: 4.40993e-05
+
+Iteration: 900
+GBest: (420.96, 420.978)
+GBest Fitness: 4.40993e-05
+
+Iteration: 1000
+GBest: (420.96, 420.978)
+GBest Fitness: 4.40993e-05
+
+
+

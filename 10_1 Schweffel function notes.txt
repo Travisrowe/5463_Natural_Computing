@@ -1,0 +1,33 @@
+Schweffel function explanation
+    all x(i) are in range -500 to 500
+    f(x) = 418.9829d - sum(x(i) * sin(sqrt(abs(x(i)))))
+    d is NUM_DIMENSIONS, so in this case for this program, x1 and x2 are all that goes in the sum
+    so REALLY fitness is 418 * NUM_DIMENSIONS - sum(pos[i] * sin(sqrt(abs(pos[i]))))
+    
+    suggested velocity: <1
+    suggested NUM_DIMENSIONS is 2 for this project
+    static variable in a class: everyone has access to and there's only one instance of it - good for gBest
+    
+Ant Colony
+    2D plane with
+        - hive of ants
+        - food item 1 (f1)
+        - food item 2 (f2)
+        
+    Random Walk
+        every iteration of time, the velocity of the ant semi-randomly changes direction but not speed
+            semi-randomly because we restrict the angle of change so that the ant doesn't go back the way he just came from
+            
+    When ant gets food, he heads straight back to hive, leaving a pheremone trail so his hive can find food
+    
+    When another ant runs into the pheremone trail, he smells which side of the trail has dissipated a bit more and heads that way, because the trail is stronger in the direction
+        of the hive.
+        
+    If there's an obstruction like a pond between the hive and the food, there are two trails, the longer one and shorter one
+        the shorter trail is "hotter" because ants travel it faster, leaving pheremones the whole way
+        
+Traveling Salesman Problem
+    As a training example, we can generate a cyclic graph with N points. All points are on the edge of the graph, making a circle, so the shortest distance is along the edge.
+    Calculating distance between two points
+        SOH CAH TOA
+        or use a rotation matrix and pass in theta, or 360/N in this case
