@@ -1,2 +1,1 @@
-﻿  Particle.cpp
-  ParticleSwarmOptimization.vcxproj -> C:\Users\Travis\Documents\School_Related\Natural Computing\ParticleSwarmOptimization\Debug\ParticleSwarmOptimization.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets(314,5): error MSB6003: The specified task executable "CL.exe" could not be run. The process cannot access the file 'C:\USERS\TRAVIS\DOCUMENTS\SCHOOL RELATED\5463_NATURAL_COMPUTING\PARTICLESWARMOPTIMIZATION\PARTICLESWARMOPTIMIZATION\DEBUG\PARTICLESWARMOPTIMIZATION.PCH' because it is being used by another process.
