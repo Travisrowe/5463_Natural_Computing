@@ -1,0 +1,2 @@
+Rotation Matrix - look it up
+	2 * PI / N gives you theta

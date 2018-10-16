@@ -1,0 +1,30 @@
+Clustering in a graph
+	ants in nature carry their sick and dead to a cemetery.
+	in our program, have an ant carry an object. When the ant finds the cluster that his object belongs to
+		he drops the object and the cluster becomes a little bigger.
+		
+	We have a 3 dimensional grid, 
+	we want to put it in a 2 dimensional grid so we can see clusters better on our screen
+	
+Putting on 2D grid
+	Unburdened ant wanders graph, looking for object to pick up
+		Probability of pick up, P(pick) = (k1 / (k1 + f(O(i)))) ^ 2 
+			f(O(i)) returns between 0 and 1
+			
+			in an s x s grid around the ant in question, O(i) is the ant in question, any O(j) is an ant
+				in the vicinity of O(i)
+			f(O(i)) = max(0; 1/s^2 * sum((1 - d( O(i), O(j) )) / alpha)
+			
+			if f(O(i)) is close to 0, then P is close to 1, because if f(O(i)) is 0, then there are not j ants
+				in the vicinity of the i ant, so the object is almost certainly out of place
+			
+	Have ant be able to "see" the graph immediately around him to know if he's inside a cluster and what kind it is
+	
+Erasing 2D grid and putting Clusters into containers
+	After your clusters are accurately represented in the 2D grid, you can add Objects to a Cluster container, like a vector
+		To do this:
+			Traverse the 2D grid top-bottom, left-right, until you hit an Object.
+			Recursively search around the Object for other Objects. 
+			When you find one
+				Add first Object to Cluster, 
+				then erase it from the grid so you don't ever hit it again
