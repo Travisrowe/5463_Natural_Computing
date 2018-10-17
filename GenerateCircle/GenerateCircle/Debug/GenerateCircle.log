@@ -1,2 +1,6 @@
 ﻿  GenerateCircle.cpp
+c:\users\travis\documents\school related\5463_natural_computing\generatecircle\generatecircle\generatecircle.cpp(31): warning C4101: 'a': unreferenced local variable
+c:\users\travis\documents\school related\5463_natural_computing\generatecircle\generatecircle\generatecircle.cpp(31): warning C4101: 'f': unreferenced local variable
+c:\users\travis\documents\school related\5463_natural_computing\generatecircle\generatecircle\generatecircle.cpp(31): warning C4101: 'd': unreferenced local variable
+c:\users\travis\documents\school related\5463_natural_computing\generatecircle\generatecircle\generatecircle.cpp(31): warning C4101: 'o': unreferenced local variable
   GenerateCircle.vcxproj -> C:\Users\Travis\Documents\School Related\5463_Natural_Computing\GenerateCircle\Debug\GenerateCircle.exe
