@@ -1,0 +1,16 @@
+adjusting direction of ant
+	randomize theta in a 180 degree arc (so the ant doesn't step backwards)
+		use rotation matrix to adjust velocity
+	size of the ant's step does not change, it will always be the width of one cell on the grid
+		i.e. the ant changes location by at least one grid square each time
+		
+class Ant
+{
+	pair<int, int> loc;
+	pair<double, double> vel; //adjusted using a rotation matrix
+	int carrying; //number of the object we are carrying 0 - n,
+		// -1 if we are not carrying anything
+public:
+	Ant();
+	~Ant();
+}
