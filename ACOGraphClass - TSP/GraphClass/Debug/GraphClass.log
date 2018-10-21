@@ -1,0 +1,10 @@
+﻿  GraphClass.cpp
+  Graph.cpp
+  Colony.cpp
+f:\naturalcomp\acographclass - tsp\graphclass\colony.cpp(51): warning C4018: '<': signed/unsigned mismatch
+  Ant.cpp
+f:\naturalcomp\acographclass - tsp\graphclass\ant.cpp(88): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
+  GraphClass.vcxproj -> F:\NaturalComp\ACOGraphClass - TSP\Debug\GraphClass.exe
+  GraphClass.vcxproj -> F:\NaturalComp\ACOGraphClass - TSP\Debug\GraphClass.pdb (Partial PDB)
