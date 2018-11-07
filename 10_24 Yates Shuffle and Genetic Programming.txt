@@ -1,0 +1,13 @@
+Yates Shuffle
+	erasing from a vector causes the whole vector to shift
+		Instead of erasing, swap the index to erase with the very last index of the vector
+		then decrement your matrix's "size" so that the index we just swapped will not get picked
+		
+***************************************************************************************************
+**Graphics class in the spring semester will have a whole butt-ton of programming. Be fore-warned**
+***************************************************************************************************
+
+Genetic Programming (GP)
+	Evolve a function from a set of points with no equation
+	Our chromosomes are equation trees (leaves are values, such as 3, x, 7, etc.)
+	to crossover, we swap a subtree between two equation trees

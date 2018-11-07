@@ -14,3 +14,31 @@ public:
 	Ant();
 	~Ant();
 }
+
+
+/***************************************************************************************************
+ * attributes doesn't necessarily have to be a location, you can think of it like characteristics  *
+ * which have a numerical value. This way we cluster things that are alike rather than things that *
+ * are close to each other in our n-dimensional world                                              *
+****************************************************************************************************/
+
+class Object //this is what the ants pick up
+{
+	int dimension; //number of attributes
+	vector<double> attribute;
+public:
+	Object() = delete;
+	~Object();
+	Object(int d)
+	{
+		dimension = d;
+	}
+	
+	void SetAttribute(vector<double> att)
+	{
+		if(att.size() != dimension)
+			cout << "ERROR: attribute size does not equal dimension";
+		else
+			attribute = att;
+	}
+}

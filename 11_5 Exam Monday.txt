@@ -1,0 +1,55 @@
+Exam Mon
+	Read Chapters 	7. GP
+					9. Ants
+					+ other
+
+Project before exam
+	1)	Create a set of random binary operator trees which contains only add, subtract, divide, multiply
+		as its operators, three variables x, y, and z, and random numbers from 0 - 10
+		
+	Give a weight to operators so that you end up with more trees that are not just one node
+	Also give a limit to trees so that at some point, operators can no longer be selected
+
+
+enum Class NodeType {opNode, varNode, valNode};
+enum Class OperType {add, subtract, multiply, divide};
+		
+Class ETNode
+{
+	ETNode * left;
+	ETNode * right;
+	int val; //int 0 - 10
+	NodeType NType;
+	OperType op;
+	char var; //x, y, z
+	
+public:
+	ETNode() 
+	{
+		//pick random NType
+		//if opNode, pick random OperType
+		//else generate random var or val
+	}
+};
+
+Class BETree
+{
+	ETNode * root;
+	
+public:
+	BETree() {root = null}
+	
+	BuildRandTree();
+	
+	BuildTreeAux(ETNode * r)
+	{
+		r = new ETNode();
+		if(NType = op)
+		{
+			BuildTree(r->left);
+			BuildTree(r->right);
+		}
+	}
+	
+	void Print(); //pre-order print
+}

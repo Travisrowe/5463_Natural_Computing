@@ -9,12 +9,14 @@
 #include "Ant.h"
 #include "Colony.h"
 using namespace std;
-int V=50;// number of vertices in graph. Should be set to match graph size .
+int V=40;// number of vertices in graph. Should be set to match graph size .
 // The above is a coding issue I need to address!!. Results from the global
 // definition of the random functions below.  How can we fix this students?
-std::default_random_engine generator(4);
+std::default_random_engine generator(2);
 std::uniform_real_distribution<double> distribution(0.0, 1.0);
-std::uniform_int_distribution<int> int_distribution(0, V-1);// 
+std::uniform_int_distribution<int> int_distribution(0, V-1); 
+	//cin >> size is below
+	//we can pass size into a static distirbution function
 int main()
 {
 	//std::default_random_engine generator(2);

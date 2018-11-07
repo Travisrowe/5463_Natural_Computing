@@ -25,6 +25,12 @@
     <Text Include="circle50.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="circle40.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="circle80.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GraphClass.cpp">
