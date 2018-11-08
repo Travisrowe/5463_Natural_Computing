@@ -1,55 +1,19 @@
 Exam Mon
 	Read Chapters 	7. GP
 					9. Ants
+					Binary Expression Tree project (20%)
 					+ other
-
-Project before exam
-	1)	Create a set of random binary operator trees which contains only add, subtract, divide, multiply
-		as its operators, three variables x, y, and z, and random numbers from 0 - 10
-		
-	Give a weight to operators so that you end up with more trees that are not just one node
-	Also give a limit to trees so that at some point, operators can no longer be selected
-
-
-enum Class NodeType {opNode, varNode, valNode};
-enum Class OperType {add, subtract, multiply, divide};
-		
-Class ETNode
-{
-	ETNode * left;
-	ETNode * right;
-	int val; //int 0 - 10
-	NodeType NType;
-	OperType op;
-	char var; //x, y, z
+					
+Vocab
+	Full tree - every branch has maximum amount of leaves in a tree
 	
-public:
-	ETNode() 
-	{
-		//pick random NType
-		//if opNode, pick random OperType
-		//else generate random var or val
-	}
-};
-
-Class BETree
-{
-	ETNode * root;
+Keeping track of height in a full tree
+	pass depth into the BuildTreeAux, and pass depth + 1 into the left and right constructors of every node
 	
-public:
-	BETree() {root = null}
-	
-	BuildRandTree();
-	
-	BuildTreeAux(ETNode * r)
-	{
-		r = new ETNode();
-		if(NType = op)
-		{
-			BuildTree(r->left);
-			BuildTree(r->right);
-		}
-	}
-	
-	void Print(); //pre-order print
-}
+Crossover on BET
+	Swap parts of the tree
+Mutation
+	Delete tree at this node and make a whole new tree
+	OR swap this node's left pointer with its right pointer
+Fitness
+	Evaluate this mofo with actual numbers inside the var

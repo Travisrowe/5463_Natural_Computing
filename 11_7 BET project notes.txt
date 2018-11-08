@@ -1,0 +1,73 @@
+Project before exam
+	1)	Create a set of random binary operator trees which contains only add, subtract, divide, multiply
+		as its operators, three variables x, y, and z, and random numbers from 0 - 10
+		
+	Give a weight to operators so that you end up with more trees that are not just one node
+	Also give a limit to trees so that at some point, operators can no longer be selected
+
+
+enum Class NodeType {opNode, varNode, valNode};
+enum Class OperType {add, subtract, multiply, divide};
+		
+Class ETNode
+{
+	ETNode * left;
+	ETNode * right;
+	int val; //int 0 - 10
+	NodeType NType;
+	//Initializing NodeType NType
+	//NType = NodeType::opNode;
+	//or NType = NodeType::varNode;
+	
+	OperType op;
+	char var; //x, y, z
+	
+public:
+	ETNode() 
+	{
+		//pick random NType
+		//if opNode, pick random OperType
+		//else generate random var or val
+		
+		int NTSelector = rand() % 3;
+		switch(NTSelector)
+		{
+		case 0: //opNode
+			int opSelector = rand() % 4; //use this to select what type of operator
+			break;
+			
+		case 1: //varNode
+			int varSelector = rand() % 3; //use this to select X, Y, or Z
+			var = 'X' + varSelector;
+			break;
+		case 2: //valNode
+			val = rand() % 11; //generate 0 - 10
+			break;
+		}
+	}
+};
+
+__________________________________________________________________________________________________________________________
+__________________________________________________________________________________________________________________________
+
+Class BETree
+{
+	ETNode * root;
+	
+public:
+	BETree() {root = null}
+	
+	BuildRandTree(); //calls BuildTreeAux
+	
+	BuildTreeAux(ETNode *& r) //don't forget the &!
+	{
+		r = new ETNode();
+		if(NType = op)
+		{
+			BuildTree(r->left);
+			BuildTree(r->right);
+		}
+	}
+	
+	void Print(); //pre-order print
+}
