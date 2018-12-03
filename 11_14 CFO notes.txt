@@ -1,0 +1,17 @@
+Central Force Optimization (CFO)
+	Gravity Heuristic - not an exact simulation of physics
+		F = m * a
+		in our case, mass is equal to fitness of an object. Objects with higher mass are harder to move
+		
+		s = s + V[0]t + (1/2) * a * t^2
+		except V[0]t is a pain in our case so
+		s = s + (1/2) * a * t^2	
+		
+		Each step of calculating (acceleration and fitness for each node) takes O(N^2) time. N * (N - 1)
+		
+		CFO is deterministic because it does not use RNG. We can predict what's going to happen.
+		
+	Himmelblau's function
+	
+	In our program, T is actually delta time.
+		double T = .05;

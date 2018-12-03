@@ -1,0 +1,25 @@
+Simulated Annealing (folding metal like in swords)
+	Similar to a local search algorithm (hill climbing)
+	
+	Local Search Algorithms
+		Use very little memory
+		
+Function SA
+{
+	//initialize T and x (a random starting state)
+	E = eval(x) //energy state
+	t = 1
+	while(not done)
+	{
+		x' = perturb(x) //get a neighbor
+		E' = eval(x') //energy state
+		if(E' < E) x = x' //hill climbing
+		else
+			if(rand()/RAND_MAX < exp((E-E') / T)
+				x = x'
+		T = beta * T; //beta is a constant < 1
+		t++;
+	}
+	//note that beta is used to reduce T, ie lower the temp
+	//As T gets smaller, hill climbing becomes more common
+}
