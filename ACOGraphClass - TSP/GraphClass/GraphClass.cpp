@@ -9,21 +9,29 @@
 #include "Ant.h"
 #include "Colony.h"
 using namespace std;
-int V=40;// number of vertices in graph. Should be set to match graph size .
+
+#define RANDOM_PLACEMENT true
+
+static std::uniform_int_distribution<int> SetDistributor(int a, int b)
+{
+	static std::uniform_int_distribution<int> int_distribution(a, b);
+	return int_distribution;
+}
+
+//int V;// number of vertices in graph. Should be set to match graph size .
 // The above is a coding issue I need to address!!. Results from the global
 // definition of the random functions below.  How can we fix this students?
 std::default_random_engine generator(2);
 std::uniform_real_distribution<double> distribution(0.0, 1.0);
-std::uniform_int_distribution<int> int_distribution(0, V-1); 
+std::uniform_int_distribution<int> int_distribution;
 	//cin >> size is below
 	//we can pass size into a static distirbution function
 int main()
 {
-	//std::default_random_engine generator(2);
 	// Important parameters
 	int numAnts = 50;
-	int alpha = 1;  //this is the power value of the tau's
-	int beta = -2; // this is the power value of the lengths
+	int alpha = 2;  //this is the power value of the tau's
+	int beta = -3; // this is the power value of the lengths
 	int numSoln = 100;
 	double rho = .7;// this is the evaporation factor. The algorithm is quite sensitive to this parameter
 	double pathlen,minpathlen;
@@ -34,7 +42,8 @@ int main()
 	string dir;
 	type d;
 	cin >> dir >>size;
-	//std::uniform_int_distribution<int> int_distribution(0, size- 1);// 
+	int_distribution = SetDistributor(1, size - 1);
+	//static std::uniform_int_distribution<int> int_distribution(1, size - 1);
 	if (dir == "U")d = type::UNDIRECTED;
 	else d = type::DIRECTED;
     Graph Gph(size,d);
@@ -46,13 +55,18 @@ int main()
 	// The following loop will run the algorithm for multiple iterations.
 	for (int iter = 0; iter < 1; iter++) {
 		// Create colony of ants on this graph using alpha power
-		Colony colony(Gph, alpha,beta);
+		Colony colony(Gph, alpha, beta);
 		// Add some ants to the colony
+#ifdef RANDOM_PLACEMENT //place ants randomly on nodes
 		for (int i = 0; i < numAnts; i++) {
 			int v = int_distribution(generator);
 			// what could we do here differently?
-			colony.AddAnt(v, i); //add ant on random vertex v with label i
+			colony.AddAnt(v, i); //add ant on random vertex v with label i 
 		}
+#else //place one ant on each node
+		for (int i = 0; i < size; i++)
+			colony.AddAnt(i, i); //add ant on each vertex i with label i
+#endif
 
 		// This is one iteration of the algorithm. Every ant finds a soln by traversing
 		// the graph until V-1 cities are found
