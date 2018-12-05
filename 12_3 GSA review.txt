@@ -1,0 +1,30 @@
+Test Wednesday
+	Study Pseudocodes from the book
+		CFO + GSA + Simulated Annealling
+		//CFO is deterministic (not random)
+		//most other algorithms in this class are stochastic (random)
+	Study CFO program where he modifies parameters (velocity, position, acceleeration, etc)
+
+Gravitational Search Algorithm
+	F = G * ((M1 * M2) / R^2) //magnitude
+	//M1 is mass of object 1, M2 is of object 2, R is the distance between the objects
+	//To get the direction of this force, we divide the length of the vector by the 
+		//distance between the objects (which gets a vector of length 1). Now we have a force (magnitude)
+		//and a direction
+		
+	Three kinds of masses
+		Active gravitational mass Ma
+		Passive gravitational mass Mp
+		Inertial mass Mi
+		
+	The gravitational force Fij that acts on mass i by mass j is
+		Fij = G * ((Maj * Mpi) / R^2)
+		
+	Agents update their velocities and positions like this
+		Vi(t + 1) = randi * Vi(t) + ai(t)
+		Xi(t + 1) = randi * Vi(t) + ai(t) //t is the iteration, so t + 1 just means "new position"
+		
+	Fitness function and mass are equivalent in this program
+	
+	Instead of calculating forces for all particles, take the best k objects and calculate forces toward
+		those motherfuckers. E.g. 1000 total particles, take the best 50
