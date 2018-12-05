@@ -15,16 +15,46 @@ Gravitational Search Algorithm
 	Three kinds of masses
 		Active gravitational mass Ma
 		Passive gravitational mass Mp
-		Inertial mass Mi
+		Inertial mass - the acceleeration of a particle is equal to the force acting on it divided by its inertial mass
+			heavier (more fit) particles do not have their acceleeration changed much.
+			a = F / m
 		
 	The gravitational force Fij that acts on mass i by mass j is
-		Fij = G * ((Maj * Mpi) / R^2)
+		//passive of i (you gotta come to me) times the active of j
+		Fij = G * ((Maj * Mpi) / (R^2 + epsilon)) //epsilon is a small constant, avoids div by 0 err
 		
 	Agents update their velocities and positions like this
-		Vi(t + 1) = randi * Vi(t) + ai(t)
-		Xi(t + 1) = randi * Vi(t) + ai(t) //t is the iteration, so t + 1 just means "new position"
+		Xi(t + 1) = Xi(t) + Vi(t) //t is the iteration, so t + 1 just means "new position"
+		Vi(t + 1) = randi * Vi(t) + ai(t) //randi just gives this a random search characteristic
+			i is between 0 and 1
 		
 	Fitness function and mass are equivalent in this program
 	
 	Instead of calculating forces for all particles, take the best k objects and calculate forces toward
-		those motherfuckers. E.g. 1000 total particles, take the best 50
+		those motherfuckers. 
+		At the start of the program, k = n : all particles attract all others, 
+		but as the program goes on, k decreases
+		
+		Fi(t) = sum(kbest ; randj * Fij(t))
+
+	Gravitational constant is reduced over time like in simulated annealling
+	
+	masses are calculated like so
+		mi(t) = ( f(xi(t)) - worst(t) ) / ( best(t) - worst(t) )
+		Mi(t) = mi(t) / sum(of all other masses : mj(t) )
+	
+Algorithm
+{
+	Identify search space;
+	Perform randomized initialization;
+	while(!finished)
+	{
+		for( all i in N )
+			Update Mi(t)
+			Update G(t), best(t), worst(t);
+			Calculate total force on agent i
+			Calculate acceleeration and velocity;
+			Update agent's position
+	}
+}
+	

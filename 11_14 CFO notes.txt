@@ -15,3 +15,30 @@ Central Force Optimization (CFO)
 	
 	In our program, T is actually delta time.
 		double T = .05;
+		
+Algorithm
+{
+	t = 0
+	DELTA_T = //some constant
+	//Initialize the probes' position vectors at time 0, x[1](0), ..., x[N](0), to a uniform or similar distribution over the search space
+	for each (probe i to N) do
+	{
+		set initial velocity v[i](0) = 0;
+		set initial acceleration a[i](0) = 0;
+		compute initial fitness M[i](0) = f(x[i](0));
+	}
+	while(t < MAX_TIME && !finished)
+	{
+		for each (probe i to N) do
+		{
+			//Compute new probe position
+			x[i] = x[i] + (1/2)a[i]*DELTA_T^2;
+			if(newPos is out of bounds)
+				relocate x[i]
+			Update fitness
+			v[i] = newPos - oldPos
+			compute new acceleration
+		}
+	}
+		
+}
